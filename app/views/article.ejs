@@ -1,0 +1,39 @@
+<%- include ('partials/head') %> 
+
+<div class="articleDiv">
+<img class="img-article" src="/images/<%= coffeebyId.name %>.png" alt="photo du café en grains <%= coffeebyId.name %>">
+<h2><%= coffeebyId.name %></h2>
+<h3><%= coffeebyId.detailed_description %></h3>
+<h3>Origine: <%= coffeebyId.origin %></h3>
+<h3>Prix au kg: <%= coffeebyId.kg_price %> €</h3>
+<h3>Gout: <%= coffeebyId.variety %></h3>
+<h3>Disponibilité: <%= coffeebyId.available %></h3>
+</div>
+
+
+<!--
+<section class="selection">
+        <label for="weight">Choisissez votre poids :</label>
+        <select id="weight" name="poid">
+            <option value="100g">100 grammes</option>
+            <option value="250g">250 grammes</option>
+            <option value="500G">500 grammes</option>
+            <option value="1000g">1 kilogramme</option>
+        </select>
+
+        
+        <label for="type">Choisissez votre type :</label>
+        <select id="type" name="type">
+            <option value="grains">Café en grains</option>
+            <option value="moulu">Café moulu</option>
+            <option value="dosette">Dosette</option>
+        </select>
+    
+
+    
+        <label for="quantity">Quantité :</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" value="1">
+</section>
+
+ -->
+<%- include('partials/foot') %>

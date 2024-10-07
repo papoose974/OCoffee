@@ -1,0 +1,19 @@
+<%- include('partials/head') %> 
+
+<h2 class="catalogueTitle">Notre Catalogue</h2>
+
+<div class="cssCatalogueDiv">
+    <% for (const coffee of coffees)  { %>
+    <div class="divCatalogue">
+        <img class="imgCatalogue"  src="/images/<%= coffee.name %>.png" alt="Café">
+        <h2><%= coffee.name %></h2>
+        <h3>Prix : <%= coffee.kg_price %> €</h3>
+        <h3>Description : <%= coffee.description %></h3>
+        <h3>Origine : <%= coffee.origin %></h3>
+        <h3>Gout : <%= coffee.variety %></h3>
+        <a href="/article/<%= coffee.id %>">VOIR LE PRODUIT</a>
+    </div>
+<% } %>
+</div> 
+
+<%- include('partials/foot') %> 
