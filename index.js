@@ -4,11 +4,15 @@ const express = require('express');
 const router = require('./app/router');
 const db = require('./app/database');
 const app = express();
+const path = require('path');
 
 const PORT = process.env.PORT || 4000;
 
 app.set('view engine', 'ejs');
-app.set('views', 'app/views');
+app.set('views', path.join(__dirname, 'app/views'));
+
+console.log('Views directory:', app.get('views'));
+
 
 app.use(express.static('public'));
 

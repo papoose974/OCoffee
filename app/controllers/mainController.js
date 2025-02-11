@@ -1,10 +1,12 @@
 const dataMapper = require('./../dataMapper');
+const path = require("path");
 
 mainController = {
 
     homePage: async (req, res) => {
         try {
-        const coffees = await dataMapper.getAllCoffee();    
+        const coffees = await dataMapper.getAllCoffee();
+        console.log("Rendering accueil.ejs...");    
         res.render ('accueil', { coffees });
         } catch (error) {
         console.log(error);
