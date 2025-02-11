@@ -4,8 +4,12 @@ const { Client } = require('pg');
 
 // Création du client PostgreSQL en utilisant la chaîne de connexion de Supabase
 const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-});
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false // Nécessaire pour Supabase
+    }
+  });
+  
 
 // Connexion à la base de données
 client.connect()
