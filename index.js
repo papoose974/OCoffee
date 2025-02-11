@@ -1,5 +1,6 @@
 require('dotenv').config();
 console.log("DATABASE_URL:", process.env.DATABASE_URL);
+require('./test'); // Assurez-vous que test.js est dans le bon répertoire et que cette ligne est incluse
 
 
 const express = require('express');
